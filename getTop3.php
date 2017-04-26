@@ -3,7 +3,8 @@
     header('Access-Control-Allow-Origin: *');
     
      // connect to the database
-    $mysqli = new mysqli('localhost', 'root', '', 'HoroHolder');
+    // $mysqli = new mysqli('localhost', 'root', '', 'HoroHolder'); // local
+    $mysqli = new mysqli('localhost', 'root', 'horoholder', 'HoroHolder'); 
     $result = $mysqli->query("SELECT * FROM `zodiac` ORDER BY amount DESC LIMIT 3");
     
     $arrayZodiacs = [];
